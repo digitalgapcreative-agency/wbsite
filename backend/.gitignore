@@ -1,0 +1,25 @@
+node_modules/
+dist/
+
+.env
+.env.*
+!.env.example
+
+*.log
+*.bak
+*.backup
+*.old
+*.tmp
+*.temp
+
+.DS_Store
+Thumbs.db
+
+.vscode/
+.idea/
+
+coverage/
+
+# Local development data
+data/*.backup
+data/*.bak
