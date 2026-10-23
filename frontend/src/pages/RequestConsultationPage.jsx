@@ -1,3 +1,4 @@
+import { openConsultationEmail } from '../utils/consultationEmail.js';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
@@ -94,8 +95,7 @@ const inputCls =
     'w-full rounded-xl border border-[#C4C2B9]/50 bg-white/60 px-4 py-3.5 text-[#250601] placeholder-[#250601]/30 text-sm transition-all duration-200 focus:border-[#250601]/60 focus:outline-none focus:ring-2 focus:ring-[#250601]/10 focus:bg-white/80 hover:border-[#250601]/30';
 
 // ─── Thank You Screen ─────────────────────────────────────────────────────────
-const ThankYou = ({ name, channel }) => {
-    const ch = CHANNELS.find((c) => c.id === channel);
+const ThankYou = ({ name }) => {
     return (
         <div className="flex flex-col items-center gap-6 py-8 text-center">
             {/* Animated check */}
@@ -112,19 +112,15 @@ const ThankYou = ({ name, channel }) => {
 
             <div>
                 <h2 className="font-display text-3xl md:text-4xl text-[#250601] leading-tight">
-                    Thank you, {name?.split(' ')[0] || 'there'}!
+                    One more step, {name?.split(' ')[0] || 'there'}
                 </h2>
                 <p className="mt-3 text-[#250601]/60 text-base max-w-md mx-auto leading-relaxed">
-                    Your request has been received. Our team will reach out within{' '}
-                    <strong className="text-[#250601]/80">48 hours</strong>
-                    {ch ? (
-                        <>
-                            {' '}via{' '}
-                            <span className="font-semibold text-[#250601]">{ch.label}</span>
-                        </>
-                    ) : (
-                        ''
-                    )}.
+                    Complete and send the email in your email app.
+                    This website has not sent your request.
+                    If no app opens, email{' '}
+                    <a href="mailto:agency@digitalgapco.com" className="underline">
+                        agency@digitalgapco.com
+                    </a>.
                 </p>
             </div>
 
@@ -161,29 +157,16 @@ const RequestConsultationPage = () => {
         setForm((prev) => ({ ...prev, channel: id }));
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         if (!form.channel) {
+            setStatus('error');
             setErrorMsg('Please select a preferred communication channel.');
             return;
         }
-        setStatus('loading');
         setErrorMsg('');
-        try {
-            const res = await fetch('/api/consultation', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(form),
-            });
-            if (!res.ok) {
-                const data = await res.json().catch(() => ({}));
-                throw new Error(data.message || 'Something went wrong.');
-            }
-            setStatus('success');
-        } catch (err) {
-            setStatus('error');
-            setErrorMsg(err.message || 'Something went wrong. Please try again.');
-        }
+        openConsultationEmail(form);
+        setStatus('success');
     };
 
     return (
@@ -266,7 +249,7 @@ const RequestConsultationPage = () => {
                         {status === 'success' ? (
                             <ThankYou name={form.name} channel={form.channel} />
                         ) : (
-                            <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-7">
+                            <form onSubmit={handleSubmit} className="flex flex-col gap-7">
 
                                 {/* Honeypot anti-spam: deve permanecer vazio */}
                                 <div
@@ -486,11 +469,11 @@ const RequestConsultationPage = () => {
                                                 <span
                                                     className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-white/30 border-t-white"
                                                 />
-                                                Sending…
+                                                Preparing…
                                             </>
                                         ) : (
                                             <>
-                                                Send Request
+                                                Prepare Email
                                                 <Send
                                                     size={16}
                                                     className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"

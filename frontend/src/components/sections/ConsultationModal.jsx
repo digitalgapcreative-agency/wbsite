@@ -1,16 +1,26 @@
 
 import { X, CheckCircle2, AlertCircle } from 'lucide-react';
 import { PillButton, InputField } from '../ui/Primitives.jsx';
-import { useForm } from '../../hooks/useForm.js';
-import { requestConsultation } from '../../services/api.js';
+import { useState } from 'react';
+import { openConsultationEmail } from '../../utils/consultationEmail.js';
 
 const INITIAL_VALUES = { name: '', email: '', company: '', challenge: '', website: '' };
 
 const ConsultationModal = ({ onClose }) => {
-    const { values, handleChange, handleSubmit, status, message } = useForm(
-        INITIAL_VALUES,
-        requestConsultation
-    );
+    const [values, setValues] = useState(INITIAL_VALUES);
+    const [status, setStatus] = useState('idle');
+    const message = 'Complete and send the email in your email app. This website has not sent your request.';
+
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setValues((previous) => ({ ...previous, [name]: value }));
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        openConsultationEmail(values);
+        setStatus('success');
+    };
 
     return (
         /* Backdrop */
@@ -31,17 +41,21 @@ const ConsultationModal = ({ onClose }) => {
 
                 <h2 className="text-3xl font-medium text-[#250601] mb-2">Request a Consultation</h2>
                 <p className="text-sm text-[#250601]/60 mb-8">
-                    Tell us a little about your business and we&apos;ll be in touch within 48 hours.
+                    Fill in your details to prepare an email. You must send it from your email app.
                 </p>
 
                 {status === 'success' ? (
                     <div className="flex flex-col items-center gap-4 py-8 text-center">
                         <CheckCircle2 size={48} className="text-[#250601]" />
                         <p className="text-lg font-medium">{message}</p>
+                        <a href="mailto:agency@digitalgapco.com" className="underline">
+                            agency@digitalgapco.com
+                        </a>
+                        <PillButton onClick={() => setStatus('idle')}>Back to details</PillButton>
                         <PillButton onClick={onClose}>Close</PillButton>
                     </div>
                 ) : (
-                    <form onSubmit={handleSubmit} className="flex flex-col gap-5" noValidate>
+                    <form onSubmit={handleSubmit} className="flex flex-col gap-5">
                         <div
                             aria-hidden="true"
                             style={{
@@ -77,7 +91,7 @@ const ConsultationModal = ({ onClose }) => {
 
                         <div className="flex justify-end mt-2">
                             <PillButton type="submit" disabled={status === 'loading'}>
-                                {status === 'loading' ? 'Sending…' : 'Send Request'}
+                                {status === 'loading' ? 'Preparing…' : 'Prepare Email'}
                             </PillButton>
                         </div>
                     </form>
