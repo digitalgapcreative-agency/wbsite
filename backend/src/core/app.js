@@ -27,7 +27,7 @@ export const createApp = () => {
   app.use(securityMiddleware);
   app.use(corsMiddleware);
   app.use(loggerMiddleware);
-  app.use(rateLimiter);
+  app.use('/api', rateLimiter);
   app.use(express.json({ limit: '50kb' }));
   app.use(express.urlencoded({ extended: true, limit: '50kb' }));
   app.use(sessionMiddleware);

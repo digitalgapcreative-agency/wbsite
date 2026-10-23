@@ -10,7 +10,7 @@ const BRAND_NAME = 'Digital Gap Creative';
 const SITE_URL =
   process.env.SITE_URL?.trim() ||
   process.env.FRONTEND_URL?.split(',')[0]?.trim() ||
-  'https://digitalgapcreative.com';
+  'https://digitalgapco.com';
 
 const escapeHtml = (value = '') =>
   String(value)
@@ -256,7 +256,7 @@ export const sendConsultationEmails = async (data) => {
     resend.emails.send({
       from: FROM_EMAIL,
       to: ADMIN_EMAIL,
-      reply_to: data.email,
+      replyTo: data.email,
       subject: `New Consultation Request from ${String(data.name || 'Prospect')}`,
       html: adminEmailHtml(data),
     }),
@@ -272,10 +272,10 @@ export const sendConsultationEmails = async (data) => {
   const results = await Promise.allSettled(sends);
 
   results.forEach((result, index) => {
-    if (result.status === 'rejected') {
+    if (result.status === 'rejected' || result.value?.error) {
       console.error(
         `[email] Send #${index + 1} failed:`,
-        result.reason?.message || result.reason
+        result.reason?.message || result.reason || result.value?.error?.message || 'Email provider rejected the request.'
       );
     } else {
       console.log(
@@ -371,7 +371,7 @@ export const sendContactEmails = async (data) => {
     resend.emails.send({
       from: FROM_EMAIL,
       to: ADMIN_EMAIL,
-      reply_to: data.email,
+      replyTo: data.email,
       subject: `New Contact Request from ${String(data.name || 'User')}`,
       html: adminHtml,
     }),
@@ -386,10 +386,10 @@ export const sendContactEmails = async (data) => {
   const results = await Promise.allSettled(sends);
 
   results.forEach((result, index) => {
-    if (result.status === 'rejected') {
+    if (result.status === 'rejected' || result.value?.error) {
       console.error(
         `[email] Contact Send #${index + 1} failed:`,
-        result.reason?.message || result.reason
+        result.reason?.message || result.reason || result.value?.error?.message || 'Email provider rejected the request.'
       );
     } else {
       console.log(

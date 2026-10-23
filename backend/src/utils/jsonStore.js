@@ -20,10 +20,11 @@ export const readCollection = (name) => {
     if (!existsSync(filePath)) return [];
     try {
         const raw = readFileSync(filePath, 'utf-8');
-        return raw.trim() ? JSON.parse(raw) : [];
+        const records = JSON.parse(raw);
+        if (!Array.isArray(records)) throw new Error('Expected a JSON array.');
+        return records;
     } catch (err) {
-        console.error(`[jsonStore] Failed to read "${name}":`, err.message);
-        return [];
+        throw new Error(`Cannot read collection "${name}"; existing file preserved.`, { cause: err });
     }
 };
 
