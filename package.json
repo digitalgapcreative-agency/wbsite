@@ -10,6 +10,8 @@
     "frontend"
   ],
   "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js",
     "build": "npm run build --workspace frontend"
   }
 }

@@ -8,6 +8,7 @@ import {
 
 let mysqlReady = false;
 let mysqlPool = null;
+let mysqlInitPromise = null;
 
 const allowedTables = new Set(['admins', 'contacts', 'consultations']);
 
@@ -118,7 +119,26 @@ const hasUsableMysqlConfig = () => {
     return true;
 };
 
+const shouldUseJsonFallback = () => process.env.MYSQL_FALLBACK !== 'false';
+
 const escapeIdentifier = (value) => `\`${String(value).replace(/`/g, '``')}\``;
+
+const createMysqlPoolConfig = (database) => {
+    const base = getMysqlConfig();
+
+    return {
+        host: base.host,
+        port: base.port,
+        user: base.user,
+        password: base.password,
+        waitForConnections: true,
+        connectionLimit: 10,
+        queueLimit: 0,
+        charset: 'utf8mb4_general_ci',
+        ...(database ? { database } : {}),
+    };
+};
+
 
 const ensureDatabaseAndTables = async (pool) => {
     await pool.query(`
@@ -195,58 +215,80 @@ const ensureDatabaseAndTables = async (pool) => {
 };
 
 export const connectToMongo = async () => {
-    if (mysqlReady && mysqlPool) {
-        return true;
-    }
+    if (mysqlReady && mysqlPool) return true;
+    if (mysqlInitPromise) return mysqlInitPromise;
 
-    const isProduction = process.env.NODE_ENV === 'production';
-    const { host, port, user, password, database } = getMysqlConfig();
+    mysqlInitPromise = (async () => {
+        const production = process.env.NODE_ENV === 'production';
+        let candidate = null;
 
-    if (!hasUsableMysqlConfig()) {
-        const message = '[db] MySQL credentials are not configured for a real database connection.';
+        try {
+            const missing = ['MYSQL_HOST', 'MYSQL_USER', 'MYSQL_DATABASE']
+                .filter((key) => !process.env[key]?.trim());
 
-        if (isProduction) {
-            console.warn(`${message} Falling back to JSON storage in production to keep the app running.`);
-        } else {
-            console.warn(`${message} Falling back to JSON storage (development mode).`);
+            if ((production && missing.length) || !hasUsableMysqlConfig()) {
+                if (shouldUseJsonFallback()) {
+                    console.warn('[db] MySQL configuration is missing or invalid; using JSON fallback.');
+                    return false;
+                }
+
+                throw new Error('MySQL configuration is missing or invalid.');
+            }
+
+            const { database } = getMysqlConfig();
+
+            const bootstrapPool = mysql.createPool({
+                ...createMysqlPoolConfig(),
+                connectTimeout: 10000,
+            });
+
+            try {
+                await bootstrapPool.query(`CREATE DATABASE IF NOT EXISTS ${escapeIdentifier(database)}`);
+            } catch (error) {
+                if (!['ER_DB_CREATE_EXISTS', 'ER_ALREADY_EXISTS'].includes(error?.code)) {
+                    throw error;
+                }
+            } finally {
+                await bootstrapPool.end().catch(() => {});
+            }
+
+            candidate = mysql.createPool({
+                ...createMysqlPoolConfig(database),
+                connectTimeout: 10000,
+            });
+
+            await candidate.query('SELECT 1');
+            await ensureDatabaseAndTables(candidate);
+
+            mysqlPool = candidate;
+            mysqlReady = true;
+            return true;
+        } catch (error) {
+            mysqlReady = false;
+            mysqlPool = null;
+            if (candidate) await candidate.end().catch(() => {});
+
+            if (shouldUseJsonFallback()) {
+                console.warn('[db] MySQL unavailable; using JSON fallback.');
+                return false;
+            }
+
+            if (production) {
+                const failure = new Error('MySQL unavailable; JSON fallback disabled in production.');
+                failure.code = error.code || 'MYSQL_UNAVAILABLE';
+                failure.status = 503;
+                throw failure;
+            }
+
+            console.warn('[db] MySQL unavailable; using JSON in development.');
+            return false;
         }
-
-        mysqlReady = false;
-        mysqlPool = null;
-        return false;
-    }
+    })();
 
     try {
-        mysqlPool = mysql.createPool({
-            host,
-            port,
-            user,
-            password,
-            database,
-            waitForConnections: true,
-            connectionLimit: 10,
-            queueLimit: 0,
-            charset: 'utf8mb4_general_ci',
-        });
-
-        await mysqlPool.query('SELECT 1');
-        await ensureDatabaseAndTables(mysqlPool);
-
-        mysqlReady = true;
-        console.log(`[db] Connected to MySQL (${database} @ ${host}:${port}).`);
-        return true;
-    } catch (error) {
-        const message = `[db] MySQL connection failed: ${error.message}`;
-
-        if (isProduction) {
-            console.warn(`${message} Falling back to JSON storage in production to keep the app running.`);
-        } else {
-            console.warn(`${message} Falling back to JSON storage (development only).`);
-        }
-
-        mysqlReady = false;
-        mysqlPool = null;
-        return false;
+        return await mysqlInitPromise;
+    } finally {
+        mysqlInitPromise = null;
     }
 };
 
