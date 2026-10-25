@@ -137,6 +137,7 @@ const host = process.env.HOST || '0.0.0.0';
 const listenArgs = isSocket ? [rawPort] : [Number(rawPort), host];
 const server = app.listen(...listenArgs, () => {
   console.log(`[dgap] listening on ${isSocket ? rawPort : `${host}:${rawPort}`} (${config.env}, node ${process.version})`);
+  console.log(`[dgap] frontend ${fs.existsSync(DIST) ? 'found' : 'MISSING'} at ${DIST}`);
   for (const w of configWarnings()) console.warn(`[dgap] config: ${w}`);
   if (config.db.configured) {
     ensureSchema()
