@@ -1,17 +1,50 @@
 {
-  "name": "dgap",
-  "version": "1.0.0",
+  "name": "digitalgap-website",
+  "version": "1.1.0",
   "private": true,
+  "description": "Digital Gap (DGAP) — strategic brand and marketing consultancy website. Vite + React frontend, Express + MySQL backend.",
   "type": "module",
   "engines": {
-    "node": ">=22.12.0"
+    "node": ">=18.18"
   },
-  "workspaces": [
-    "frontend"
-  ],
   "scripts": {
-    "dev": "node --watch server.js",
-    "start": "node server.js",
-    "build": "npm run build --workspace frontend"
+    "dev": "vite --config frontend/vite.config.js",
+    "dev:api": "node --watch backend/src/server.js",
+    "build": "npm run build:client && npm run build:ssr && npm run prerender",
+    "build:client": "vite build --config frontend/vite.config.js",
+    "build:ssr": "vite build --config frontend/vite.config.js --ssr src/entry-server.jsx --outDir .ssr",
+    "prerender": "node frontend/scripts/prerender.mjs",
+    "build:preview": "vite build --config frontend/vite.preview.config.js",
+    "start": "node backend/src/server.js",
+    "db:init": "node backend/scripts/init-db.mjs",
+    "admin:hash": "node backend/scripts/hash-password.mjs",
+    "verify": "node scripts/verify-deploy.mjs",
+    "check:secrets": "node scripts/check-secrets.mjs",
+    "test:local": "node scripts/test-local.mjs"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "4.3.4",
+    "compression": "1.8.2",
+    "cors": "2.8.5",
+    "dotenv": "16.4.5",
+    "express": "4.22.3",
+    "express-mysql-session": "3.0.3",
+    "express-rate-limit": "7.4.1",
+    "express-session": "1.19.0",
+    "gsap": "3.12.5",
+    "helmet": "8.0.0",
+    "lenis": "1.1.18",
+    "mysql2": "3.24.5",
+    "nodemailer": "10.1.7",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-router-dom": "6.30.6",
+    "vite": "5.4.21"
+  },
+  "devDependencies": {
+    "vite-plugin-singlefile": "2.0.3"
+  },
+  "overrides": {
+    "mysql2": "$mysql2"
   }
 }

@@ -2,13 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Digital Gap — Strategic business consulting that helps you identify what is actually limiting performance before recommending what to do next." />
-    <title>Digital Gap – Business with Structure</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#250601" />
+    <!--app-head-->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=Work+Sans:wght@300;400;500;600&family=Yeseva+One&display=swap"
+    />
+    <script>
+      (function () {
+        var d = document.documentElement;
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        d.classList.add(reduce ? 'reduce-motion' : 'js');
+        try {
+          if (sessionStorage.getItem('dgap:visited')) d.classList.add('visited');
+          sessionStorage.setItem('dgap:visited', '1');
+        } catch (e) {}
+        // Safety net: if scripts fail to start, never leave content hidden.
+        setTimeout(function () {
+          if (!d.classList.contains('motion-ready')) d.classList.add('no-motion');
+        }, 4000);
+      })();
+    </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div class="preloader" aria-hidden="true">
+      <div class="preloader__inner">
+        <span class="preloader__word">DGAP</span>
+        <span class="preloader__bar"><span></span></span>
+        <span class="preloader__count">000</span>
+      </div>
+    </div>
+    <div id="root"><!--app-html--></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
