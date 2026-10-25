@@ -1,4 +1,4 @@
-import 'dotenv/config';
+import './env.js';
 import path from 'node:path';
 import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -130,9 +130,13 @@ app.use((err, _req, res, _next) => {
 
 // ---------- Start ----------
 // Hostinger injects PORT. No host argument: Node listens on all interfaces, not only localhost.
-const port = Number(process.env.PORT) || 3000;
-const server = app.listen(port, () => {
-  console.log(`[dgap] listening on port ${port} (${config.env}, node ${process.version})`);
+// PORT comes from Hostinger: usually a number, on some setups a socket path. Never hard-code it.
+const rawPort = String(process.env.PORT || '3000');
+const isSocket = !/^\d+$/.test(rawPort);
+const host = process.env.HOST || '0.0.0.0';
+const listenArgs = isSocket ? [rawPort] : [Number(rawPort), host];
+const server = app.listen(...listenArgs, () => {
+  console.log(`[dgap] listening on ${isSocket ? rawPort : `${host}:${rawPort}`} (${config.env}, node ${process.version})`);
   for (const w of configWarnings()) console.warn(`[dgap] config: ${w}`);
   if (config.db.configured) {
     ensureSchema()

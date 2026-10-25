@@ -1,5 +1,5 @@
 // Optional: run locally with DB_* env vars set to create tables on a remote MySQL.
-import 'dotenv/config';
+import '../src/env.js';
 import { ensureSchema, pingDb, getPool } from '../src/db.js';
 
 try {
