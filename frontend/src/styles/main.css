@@ -2708,3 +2708,30 @@ main {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* ---------- Hero parallax (original effect, rebuilt with GSAP) ---------- */
+.hpx { position: relative; height: 300vh; overflow: hidden; perspective: 1000px; transform-style: preserve-3d;
+  background: linear-gradient(180deg, var(--winery) 0%, var(--abyss) 22%, #3a0904 44%, var(--wine) 62%, #3a0904 82%, var(--winery) 100%); }
+.hpx__header { position: relative; z-index: 2; }
+.hpx__header .hero { overflow: visible; }
+.hpx__stage { position: relative; z-index: 1; display: grid; gap: 5rem; transform-origin: center top; will-change: transform, opacity; }
+.js:not(.no-motion) .hpx__stage { transform: translateY(-700px) rotateX(15deg) rotateZ(20deg); opacity: 0.2; }
+.hpx__row { display: flex; gap: 5rem; will-change: transform; }
+.hpx__row--rev { flex-direction: row-reverse; }
+.hpx__card { position: relative; flex: none; width: 30rem; height: 24rem; overflow: hidden; background: var(--wine);
+  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease); }
+.hpx__card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.hpx__shade { position: absolute; inset: 0; background: var(--winery); opacity: 0; transition: opacity 0.3s; }
+.hpx__title { position: absolute; left: 1rem; bottom: 1rem; font-family: var(--body); font-weight: 500; letter-spacing: 0.02em;
+  color: var(--paper); opacity: 0; transition: opacity 0.3s; }
+.hpx__card:hover { transform: translateY(-20px); box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6); }
+.hpx__card:hover .hpx__shade { opacity: 0.8; }
+.hpx__card:hover .hpx__title { opacity: 1; }
+@media (max-width: 899px) {
+  .hpx { height: 220vh; }
+  .hpx__stage, .hpx__row { gap: 1.5rem; }
+  .js:not(.no-motion) .hpx__stage { transform: translateY(-260px) rotateX(15deg) rotateZ(20deg); }
+  .hpx__card { width: 15rem; height: 12rem; }
+}
+.reduce-motion .hpx, .no-motion .hpx { height: auto; padding-bottom: 4rem; }
+.reduce-motion .hpx__row, .no-motion .hpx__row { overflow-x: auto; }

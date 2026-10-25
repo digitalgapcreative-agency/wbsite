@@ -4,6 +4,8 @@ import { usePageMotion } from '../lib/usePageMotion.js';
 import { scrollToEl } from '../lib/motion.js';
 import { Split, Button, Eyebrow, TLink, Arrow } from '../components/ui.jsx';
 import GapVisual from '../components/GapVisual.jsx';
+import HeroParallax from '../components/HeroParallax.jsx';
+import { heroCards } from '../content/heroCards.js';
 import Marquee from '../components/Marquee.jsx';
 import Thesis from '../components/Thesis.jsx';
 import MethodTrack from '../components/MethodTrack.jsx';
@@ -14,7 +16,7 @@ import CtaBand from '../components/CtaBand.jsx';
 export default function Home() {
   const ref = useRef(null);
   usePageMotion(ref);
-  const { t, to } = useI18n();
+  const { t, to, locale } = useI18n();
   const h = t.home;
   const mc = t.cases.mindcare;
 
@@ -25,37 +27,45 @@ export default function Home() {
 
   return (
     <div ref={ref} className="page page--home">
-      {/* HERO */}
-      <section className="hero" data-intro>
-        <div className="wrap hero__inner">
-          <Eyebrow className="hero__eyebrow">
-            <span data-reveal="0">{h.hero.eyebrow}</span>
-          </Eyebrow>
-          <h1 className="hero__title">
-            <Split as="span" text={h.hero.titleA} className="hero__line" />
-            <Split as="span" text={h.hero.titleB} className="hero__line hero__line--accent" />
-          </h1>
-          <div className="hero__foot">
-            <p className="hero__lede" data-reveal="1">
-              {h.hero.lede}
-            </p>
-            <div className="hero__ctas" data-reveal="2">
-              <Button to={to('contact')}>{h.hero.primary}</Button>
-              <a href="#method" className="textlink" onClick={(e) => {
-                  e.preventDefault();
-                  scrollToEl('#method');
-                }}>
-                {h.hero.secondary} <Arrow dir="down" />
-              </a>
+      {/* HERO — original parallax effect */}
+      <HeroParallax
+        cards={heroCards}
+        locale={locale}
+        to={to}
+        viewLabel={t.common.view}
+        header={
+          <div className="hero">
+            <div className="wrap hero__inner">
+              <Eyebrow className="hero__eyebrow">
+                <span data-reveal="0">{h.hero.eyebrow}</span>
+              </Eyebrow>
+              <h1 className="hero__title">
+                <Split as="span" text={h.hero.titleA} className="hero__line" />
+                <Split as="span" text={h.hero.titleB} className="hero__line hero__line--accent" />
+              </h1>
+              <div className="hero__foot">
+                <p className="hero__lede" data-reveal="1">
+                  {h.hero.lede}
+                </p>
+                <div className="hero__ctas" data-reveal="2">
+                  <Button to={to('contact')}>{h.hero.primary}</Button>
+                  <a href="#method" className="textlink" onClick={(e) => {
+                      e.preventDefault();
+                      scrollToEl('#method');
+                    }}>
+                    {h.hero.secondary} <Arrow dir="down" />
+                  </a>
+                </div>
+              </div>
+              <ul className="hero__facts" data-reveal="3">
+                {h.hero.facts.map((f) => (
+                  <li key={f}>{f}</li>
+                ))}
+              </ul>
             </div>
           </div>
-          <ul className="hero__facts" data-reveal="3">
-            {h.hero.facts.map((f) => (
-              <li key={f}>{f}</li>
-            ))}
-          </ul>
-        </div>
-      </section>
+        }
+      />
 
       {/* THE GAP */}
       <section className="section section--gap" aria-labelledby="gap-statement">
