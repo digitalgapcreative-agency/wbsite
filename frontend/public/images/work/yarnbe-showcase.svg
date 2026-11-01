@@ -1,0 +1,17 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#F5F2EE"/>
+  <rect x="80" y="115" width="1040" height="670" rx="28" fill="#FBF9F5" stroke="#DDCAB0" stroke-width="2"/>
+  <rect x="150" y="200" width="400" height="360" rx="22" fill="#E9E3DA"/>
+  <rect x="610" y="200" width="400" height="150" rx="18" fill="#E5D5C4"/>
+  <rect x="610" y="380" width="400" height="180" rx="18" fill="#EDF0E9"/>
+  <path d="M220 266C245 230 282 212 322 212C370 212 414 237 438 279C462 322 468 369 452 414C436 459 407 496 362 516C323 533 286 532 251 510C218 489 194 446 186 405C177 360 187 319 220 266Z" fill="#F6F1EA"/>
+  <path d="M244 312L303 285L352 351L340 423L270 410L223 350L244 312Z" fill="#D2B397"/>
+  <text x="194" y="620" fill="#37302E" font-family="Georgia, serif" font-size="56" font-weight="700">YARNBE</text>
+  <text x="196" y="666" fill="#645A53" font-family="Arial, sans-serif" font-size="22" letter-spacing="5">CROCHET STUDIO</text>
+  <text x="656" y="270" fill="#403830" font-family="Arial, sans-serif" font-size="18" letter-spacing="5">IDENTITY</text>
+  <text x="656" y="318" fill="#403830" font-family="Georgia, serif" font-size="46" font-weight="700">Warm and tactile</text>
+  <text x="656" y="446" fill="#403830" font-family="Arial, sans-serif" font-size="18" letter-spacing="5">PACKAGING</text>
+  <text x="656" y="494" fill="#403830" font-family="Georgia, serif" font-size="42" font-weight="700">Crafted to feel personal</text>
+  <rect x="160" y="718" width="860" height="38" rx="19" fill="#E8D9C9"/>
+  <text x="188" y="744" fill="#443D39" font-family="Arial, sans-serif" font-size="16" letter-spacing="4">LOGO • COLOUR • PACKAGING • PRESENTATION</text>
+</svg>

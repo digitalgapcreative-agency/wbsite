@@ -5,19 +5,19 @@ const en = {
 
   meta: {
     home: {
-      title: 'Brand Strategy & Marketing Consultancy in Indonesia | DGAP',
+      title: 'Brand Strategy & Business Consultancy | DGAP',
       description:
-        'DGAP helps established companies whose brand, website and marketing no longer match the business they have become. Brand strategy, identity and marketing from Sukabumi, Indonesia.'
+        'Launch or grow your business with DGAP. Brand strategy, identity, digital presence and business consultancy built around your customers and goals.'
     },
     services: {
-      title: 'Brand Strategy, Identity & Marketing Services | DGAP',
+      title: 'Brand Strategy, Identity & Digital Services | DGAP',
       description:
-        'Brand diagnosis, brand strategy, visual and verbal identity, marketing strategy and websites. One five-stage method, fixed scope and price before work starts.'
+        'Explore DGAP’s brand strategy, brand identity, diagnosis, website and marketing services for new and established businesses.'
     },
     consultancy: {
-      title: 'Business Architecture & Operations Consulting | DGAP',
+      title: 'Business Process & Operations Consulting | DGAP',
       description:
-        'Business architecture, process design, operational systems and growth frameworks for founder-led companies that have outgrown the way they run.'
+        'Improve workflows, clarify responsibilities and build practical operational processes with DGAP’s business consultancy services.'
     },
     work: {
       title: 'Case Studies: Brand & Marketing Strategy Work | DGAP',
@@ -29,15 +29,30 @@ const en = {
       description:
         'How DGAP built an eleven-chapter brand and marketing strategy for Mindcare, a psychology consultancy in Mozambique: audit, personas, identity, content and rebranding roadmap.'
     },
+    'case-bolleno': {
+      title: 'Bolleno Case Study: Brand Identity & Digital Experience | DGAP',
+      description:
+        'How DGAP created a recognisable home-and-body brand system for Bolleno, connecting body care, bath rituals, home fragrance and herbal teas under one experience.'
+    },
+    'case-courve': {
+      title: 'Courve Case Study: Brand Creation for a Pilates & Yoga Studio | DGAP',
+      description:
+        'How DGAP created Courve from a business idea into a market-ready brand, covering positioning, personality, identity and launch communication foundations.'
+    },
+    'case-yarnbe': {
+      title: 'YARNBE Case Study: Crochet Studio Brand Identity & Creative Direction | DGAP',
+      description:
+        'How DGAP developed a memorable brand identity for YARNBE, connecting handcrafted crochet, visual consistency and packaging into a recognisable studio presence.'
+    },
     about: {
       title: 'About DGAP: Building Brands with Structure',
       description:
         'DGAP is a strategic brand and marketing consultancy based in Sukabumi, West Java, working with companies in Indonesia and Mozambique in English, Bahasa Indonesia and Portuguese.'
     },
     contact: {
-      title: 'Book a Brand Diagnostic Call | DGAP',
+      title: 'Request a Business Consultation | DGAP',
       description:
-        'Tell us about your business. We reply personally within two working days to schedule a 45-minute diagnostic call, with no obligation to continue.'
+        'Starting a business or ready for your next stage? Tell DGAP what you’re building and request an introductory consultation.'
     },
     notFound: {
       title: 'Page not found | DGAP',
@@ -80,38 +95,38 @@ const en = {
   method: [
     {
       name: 'Discovery',
-      body: 'We learn the business as it actually runs: the model, the customers, the team, the numbers and where you want it to go.',
+      body: 'We learn about your business, your ambitions and the challenges behind the project.',
       output: 'Discovery brief'
     },
     {
       name: 'Research & Diagnosis',
-      body: 'Market, competitors, customers and your current brand, audited against what the business really is. This is where the gap gets measured.',
+      body: 'We examine the market, customers and current position to identify what matters most.',
       output: 'Gap diagnosis report'
     },
     {
       name: 'Strategic Plan',
-      body: 'Positioning, audiences, message architecture and the priorities that matter in the next twelve months.',
-      output: 'Brand & marketing strategy'
+      body: 'We define the direction, priorities and decisions that will guide the work.',
+      output: 'Strategic plan'
     },
     {
       name: 'Execution',
-      body: 'Identity, verbal system, website, content and campaigns, built from the strategy rather than alongside it.',
-      output: 'Brand system & assets'
+      body: 'We develop the agreed creative, digital or business deliverables.',
+      output: 'Creative & digital assets'
     },
     {
       name: 'Implementation',
-      body: 'Rollout, team guidelines and a clean handover, so the brand holds when we are no longer in the room.',
-      output: 'Playbook & handover'
+      body: 'We help turn the work into something your business can use consistently.',
+      output: 'Implementation guide'
     }
   ],
 
   services: {
     diagnosis: {
       name: 'Brand Diagnosis',
-      short: 'Find out exactly where your brand undersells the business.',
+      short: 'Find the real problem before paying to fix the wrong one.',
       summary:
-        'A focused audit of how your company is perceived compared with what it actually is. It is the fastest way to stop guessing and the starting point for most of our clients.',
-      forYouIf: 'You know something is off, but not exactly what, or where to begin.',
+        'We examine how your business is positioned, how customers experience it and how competitors present themselves. Then we identify what is working, where the message is falling short and what deserves attention first.',
+      forYouIf: 'You know something is off, but you are not sure what the real problem is yet.',
       deliverables: [
         'Founder and team interviews',
         'Customer perception interviews',
@@ -124,10 +139,10 @@ const en = {
     },
     strategy: {
       name: 'Brand Strategy',
-      short: 'Positioning that makes the choice obvious.',
+      short: 'Give people a clear reason to choose you.',
       summary:
-        'We define who you serve, why they should choose you and how to say it, so every team member and every channel tells the same story.',
-      forYouIf: 'You have grown, but nobody can explain clearly and quickly why a customer should choose you.',
+        'Define who your business serves, what makes it different and how to communicate its value with confidence.',
+      forYouIf: 'You need clearer positioning, stronger messaging and a more confident path to market.',
       deliverables: [
         'Positioning and value proposition',
         'Audience personas',
@@ -140,10 +155,10 @@ const en = {
     },
     identity: {
       name: 'Brand Identity',
-      short: 'A visual and verbal system built to the size of the business.',
+      short: 'Look like the business you’re building.',
       summary:
-        'A complete identity, from logo to language, designed from the strategy so it looks and sounds like the company you have become.',
-      forYouIf: 'Your look no longer matches the quality, scale or ambition of the business.',
+        'Build a distinctive visual and verbal identity that reflects your business and stays consistent wherever customers encounter it.',
+      forYouIf: 'Your look no longer reflects the quality, scale or ambition of the business.',
       deliverables: [
         'Logo and visual identity system',
         'Verbal identity and copy principles',
@@ -155,11 +170,11 @@ const en = {
       image: '/images/services/identity.webp'
     },
     marketing: {
-      name: 'Marketing Strategy & Content',
-      short: 'Marketing that builds toward something.',
+      name: 'Marketing Strategy',
+      short: 'Reach the right people with a message worth paying attention to.',
       summary:
-        'Channels, content and campaigns organised around clear objectives and a rhythm your team can sustain, with measurement agreed up front.',
-      forYouIf: 'Marketing happens, but nobody can say what it is building toward.',
+        'Connect customer understanding, clear messaging and the right channels to make your marketing more focused and purposeful.',
+      forYouIf: 'Your marketing needs to support the business more clearly, not just keep activity going.',
       deliverables: [
         'Channel and audience strategy',
         'Content pillars and editorial calendar',
@@ -171,10 +186,10 @@ const en = {
       image: '/images/services/marketing.webp'
     },
     website: {
-      name: 'Website & Digital Presence',
-      short: 'A website you are proud to send.',
+      name: 'Digital Presence',
+      short: 'Make a stronger impression before the first conversation.',
       summary:
-        'Strategy-led websites, written, designed and built to explain the business clearly, rank for the searches that matter and turn visitors into conversations.',
+        'Create a website and digital presence that explain what you offer, establish credibility and make the next step easier to take.',
       forYouIf: 'Your website is the link you hesitate to send to a serious prospect.',
       deliverables: [
         'Sitemap and conversion paths',
@@ -190,71 +205,71 @@ const en = {
 
   home: {
     hero: {
-      eyebrow: 'Brand & marketing strategy · Sukabumi, Indonesia',
-      titleA: 'Your business grew.',
-      titleB: 'Your brand didn’t.',
-      lede: 'DGAP is a strategic brand and marketing consultancy for established companies whose brand, website and marketing no longer reflect the business they have become. We find where the gap is, then build the structure that closes it.',
-      primary: 'Discuss your business',
-      secondary: 'See the method',
-      facts: ['Strategy before design', 'Fixed scope before work starts', 'English · Bahasa Indonesia · Português']
+      eyebrow: 'BRAND STRATEGY · BRAND IDENTITY · BUSINESS CONSULTANCY',
+      titleA: 'Build a brand',
+      titleB: 'people understand, trust and choose.',
+      lede: 'Starting a business or growing one you have already built? We help you define what makes your business different, communicate why it matters and bring that value to life through brand strategy, identity and digital presence.',
+      primary: 'Request a Consultation',
+      secondary: 'Explore Our Work',
+      facts: ['Research before design', 'Clear deliverables', 'Agreed scope']
     },
     gap: {
-      a: 'What your business is worth',
-      b: 'What your market sees',
+      a: 'What people understand',
+      b: 'What they choose',
       label: 'The gap',
       closed: 'Closed',
       statement:
-        'That distance is where good companies lose deals they should have won, attract the wrong clients and compete on price when they shouldn’t have to.'
+        'If people only understand what makes your business different after speaking to you, something important is not coming through.'
     },
     symptoms: {
-      eyebrow: 'Recognise any of these?',
-      title: 'The gap rarely announces itself. It shows up as symptoms.',
+      eyebrow: 'What is getting lost?',
+      title: 'Your value should not depend on how well you explain it in a meeting.',
       items: [
         {
-          t: 'Prospects compare you on price.',
-          d: 'They can’t see what makes you different, so the only thing left to compare is the number on your quote.'
+          t: 'Your website explains what you offer but not why it matters.',
+          d: 'The offer is visible, but the reason it matters is not.'
         },
         {
-          t: 'Referrals close. Cold leads don’t.',
-          d: 'People who know you already trust you. Everyone else meets a brand that undersells the company.'
+          t: 'Your brand looks professional but does not reflect the quality of your work.',
+          d: 'The impression is tidy, but the business behind it feels stronger than the brand suggests.'
         },
         {
-          t: 'You hesitate before sending the link.',
-          d: 'The website, the company profile, the deck. You start explaining them before anyone has opened them.'
+          t: 'Your message changes depending on who is telling the story.',
+          d: 'The company is not inconsistent on purpose; it is just not aligned.'
         },
         {
-          t: 'Everyone describes you differently.',
-          d: 'Ask five people on your team what the company does and you will hear five different answers.'
+          t: 'People only understand the value after a conversation.',
+          d: 'By then, the first impression has already made the wrong case.'
         },
         {
-          t: 'Marketing is activity, not a system.',
-          d: 'Posts go out and campaigns happen, but nobody can say what they are building toward.'
+          t: 'Your business may be stronger than the impression it creates.',
+          d: 'The work is credible, but the market does not fully understand what is being offered.'
         },
         {
-          t: 'Growth still runs through the founder.',
-          d: 'Every sale, decision and approval waits for one person, because nothing else is written down.'
+          t: 'The right customers need a reason to believe you are the right choice.',
+          d: 'Not just a good first impression, but a clear case for why it should be you.'
         }
       ]
     },
     thesis:
-      'A brand is the feeling a customer keeps after they leave the room. That feeling is produced inside the company, by how people speak, decide and deliver, long before it shows up in a logo. So that is where we start.',
+      'We look at your business from the customer’s perspective to understand where the message gets lost—and what will make it clearer. Because the right customers need more than a good first impression. They need a reason to believe you are the right choice.',
     marquee: ['Strategy', 'Estratégia', 'Strategi', 'Structure', 'Estrutura', 'Struktur', 'Clarity', 'Clareza', 'Kejelasan'],
     method: {
-      eyebrow: 'The method',
-      title: 'Five stages. Each one ends with something you can hold.',
+      eyebrow: 'How we work',
+      title: 'We don’t start by designing. We start by understanding.',
       intro:
-        'We don’t move to design until the diagnosis is agreed. Every stage closes with a written deliverable and your sign-off before the next one begins.'
+        'Before recommending a direction, we need to understand your business, your customers and what you are trying to achieve. Our five-stage process connects those answers to the work we create, so every major decision has a purpose.'
     },
     services: {
       eyebrow: 'What we do',
-      title: 'Strategy that reaches every place a customer meets you.',
-      consultancyName: 'Business Architecture',
-      consultancyShort: 'When the business itself needs structure.'
+      title: 'The right investment starts with the right decision.',
+      consultancyName: 'Business Consultancy',
+      consultancyShort: 'Make your business easier to run.'
     },
     work: {
       eyebrow: 'Selected work',
-      title: 'Proof, shown in full.',
-      intro: 'We show the diagnosis and the thinking behind each project, not only the finished visuals.'
+      title: 'Good design gets attention. Good thinking gives it a purpose.',
+      intro: 'Behind every project is a business challenge, a decision to make and a reason for the direction we take. Explore how we connect research, brand decisions and execution to create work that serves more than an aesthetic purpose.'
     },
     principles: {
       eyebrow: 'Working with DGAP',
@@ -286,35 +301,35 @@ const en = {
 
   faq: [
     {
-      q: 'Who is DGAP for?',
-      a: 'Established, revenue-generating companies in any sector whose brand, website or marketing has not kept pace with how the business has grown. Most of our clients are founder-led and moving from word-of-mouth growth into markets that don’t know them yet.'
+      q: 'Do I need to buy all your services?',
+      a: 'No. We recommend the work your business actually needs. You might need clearer positioning without a new identity, a website without a complete rebrand, or a diagnosis before deciding on a larger project. We will explain the recommended scope before work begins.'
     },
     {
-      q: 'How is DGAP different from a design or social media agency?',
-      a: 'A design agency makes things look better and a social media agency keeps channels active. We start one step earlier: we diagnose why the business is not perceived at its real value, write the strategy, and only then build the identity, website and marketing from it.'
+      q: 'Can I work with DGAP if my business has not launched?',
+      a: 'Yes. We work with founders preparing to enter the market as well as businesses that are already operating. If you are starting from scratch, we can help define your positioning, develop your brand and prepare its digital presence.'
     },
     {
-      q: 'How long does a project take?',
-      a: 'A brand diagnosis takes two to three weeks. A full strategy and identity project usually runs six to twelve weeks, depending on scope. You receive the timeline in writing before work starts.'
+      q: 'How do I know which service I need?',
+      a: 'You do not need to decide that before contacting us. Tell us about your business and what you are trying to achieve. We will discuss your situation and recommend a suitable starting point.'
     },
     {
-      q: 'How much does it cost?',
-      a: 'Every engagement is fixed-price. After a free 45-minute diagnostic call we send a written proposal with the exact scope and investment, so you know the full cost before any work begins.'
+      q: 'Is the introductory consultation free?',
+      a: 'Yes. The initial conversation is an opportunity to understand your business, discuss your goals and explore whether working together makes sense. A detailed Brand Diagnosis is a separate paid engagement with defined deliverables.'
     },
     {
-      q: 'Do you work with companies outside Indonesia?',
-      a: 'Yes. We are based in Sukabumi, West Java, and work with clients across Indonesia and in Mozambique, in English, Bahasa Indonesia and Portuguese. Most work runs remotely, with in-person sessions where they matter.'
+      q: 'Will I need to rebrand my business?',
+      a: 'Not necessarily. A business may need clearer messaging, better positioning or a more effective digital presence without changing its entire identity. We recommend changes based on what the business needs, not simply because a rebrand is possible.'
     },
     {
-      q: 'What do we have at the end of a project?',
-      a: 'A documented strategy, a complete brand system, the assets built from it and guidelines your team can use without us. All files and documents are yours.'
+      q: 'What happens before a project begins?',
+      a: 'We clarify the scope, deliverables, timeline and investment so you can understand what you are committing to before work starts.'
     }
   ],
 
   cta: {
-    title: 'Tell us where the gap is.',
-    body: 'A 45-minute diagnostic call. You leave with an outside view of where your brand undersells the business, whether or not we work together.',
-    button: 'Book a diagnostic call'
+    title: 'You have built the ambition. Let’s make the next decisions count.',
+    body: 'Whether you are preparing to launch, trying to make your business better understood or planning what comes next, you do not have to figure everything out before reaching out. Tell us where you are and what you are working towards. We will help you understand the next step.',
+    button: 'Request a Consultation'
   },
 
   servicesPage: {
@@ -326,9 +341,8 @@ const en = {
     clientsEyebrow: 'Brands we have worked with',
     clientsTitle: 'Built with founders who chose structure.',
     consultancyTitle: 'Is the problem how the business runs?',
-    consultancyBody:
-      'If the bottleneck is operations rather than perception, our business architecture work comes first.',
-    consultancyCta: 'See business consultancy',
+    consultancyBody: 'If the bottleneck is operations rather than perception, our business consultancy work comes first.',
+    consultancyCta: 'Explore Business Consultancy',
     engagement: {
       title: 'How engagements are structured',
       items: [
@@ -340,10 +354,10 @@ const en = {
   },
 
   consultancyPage: {
-    eyebrow: 'Business consultancy',
-    title: 'When the brand isn’t the bottleneck, the business is.',
-    lede: 'Sometimes the gap is not in how the company looks but in how it runs. Our consultancy work gives growing companies the structure their ambition needs: clear roles, documented processes and a plan the team can execute without the founder in every decision.',
-    note: 'This work is separate from our marketing services and often comes first.',
+    eyebrow: 'BUSINESS CONSULTANCY',
+    title: 'Your business should not need you for every decision.',
+    lede: 'You started your business to build something meaningful, not to become the person every decision depends on. As the company grows, informal processes, unclear responsibilities and repeated approvals can make everyday work harder than it needs to be. We help you understand where work gets stuck, clarify how decisions should be made and develop practical processes your team can follow.',
+    note: 'This work is separate from branding and marketing.',
     areasTitle: 'Areas of work',
     areas: [
       { t: 'Business Architecture', d: 'How the company is organised to deliver value: units, roles, responsibilities and how they connect.' },
@@ -353,10 +367,10 @@ const en = {
       { t: 'Strategic Planning', d: 'Priorities for the next twelve months, translated into targets, owners and a review rhythm.' },
       { t: 'Growth Frameworks', d: 'How the company will grow: which markets, which offers and which capabilities it needs to get there.' }
     ],
-    signsTitle: 'Signs you need this first',
+    signsTitle: 'When everything comes back to you, it is time to change how work gets done.',
     signs: [
       'Every decision still needs the founder.',
-      'New hires take months to become productive.',
+      'New hires need months to become productive.',
       'Quality depends on who happens to do the work.',
       'You are busy, but margins are not improving.',
       'Nobody owns the plan for next year.'
@@ -366,7 +380,7 @@ const en = {
   workPage: {
     eyebrow: 'Work',
     title: 'Work that started with a diagnosis.',
-    lede: 'We publish case studies with our clients’ permission, and we show the reasoning, not only the finished visuals. More projects are being documented now.',
+    lede: 'We publish case studies with our clients’ permission, and we show the reasoning behind the work, not only the finished visuals. More projects are being documented now.',
     comingTitle: 'Your company could be next.',
     comingBody: 'We take on a small number of clients at a time so every engagement gets senior attention.'
   },
@@ -377,7 +391,7 @@ const en = {
       sector: 'Psychology consultancy',
       location: 'Mozambique',
       language: 'Portuguese',
-      headline: 'An eleven-chapter strategy for a practice built on trust.',
+      headline: 'Clarity and consistency changed how clients chose the practice.',
       summary:
         'A full brand and marketing strategy, from audit to rebranding roadmap, for a psychology consultancy in Mozambique.',
       cover: '/images/work/mindcare-cover.webp',
@@ -385,11 +399,11 @@ const en = {
       sections: [
         {
           title: 'The challenge',
-          body: 'Mindcare had the expertise and clients who valued the work. What it lacked was a brand that could explain, to people considering psychological support for the first time, who the practice is for and why it can be trusted with something so personal.'
+          body: 'Mindcare had the expertise and clients who valued the work. What it lacked was a brand that could explain, to people considering psychological support for the first time, who the practice is for and why it could be trusted with something so personal.'
         },
         {
           title: 'The diagnosis',
-          body: 'We audited every touchpoint against how clients actually found and chose the practice. The gap was in clarity and consistency: the quality of the care was not visible in the way Mindcare presented itself.'
+          body: 'We audited every touchpoint against how clients actually found and chose the practice. The challenge involved clarity and consistency in relation to how clients chose the practice: the quality of the care was not visible in the way Mindcare presented itself.'
         },
         {
           title: 'The strategy',
@@ -397,17 +411,210 @@ const en = {
         },
         {
           title: 'Execution',
-          body: 'The strategy then guided the website builds and a series of Portuguese-language video scripts, so every piece of content came from the same positioning rather than from improvisation.'
+          body: 'The strategy then guided the website build and a series of Portuguese-language video scripts, so every piece of content came from the same positioning rather than from improvisation.'
         }
       ],
       images: [
-        { src: '/images/work/mindcare-strategy.webp', alt: 'Pages from the Mindcare brand strategy document' },
-        { src: '/images/work/mindcare-identity.webp', alt: 'Mindcare colour palette study' }
+        { src: 'https://drive.google.com/thumbnail?id=1VsF7Fm1tbWXYkVkFhHaMnMvEAGF4ndMd&sz=w1600', alt: 'Mindcare cover' },
+        { src: 'https://drive.google.com/thumbnail?id=1_uMJlcdD8_WJFrDvqb7AH_gee2gk0v49&sz=w1600', alt: 'Mindcare cover board' },
+        { src: 'https://drive.google.com/thumbnail?id=1QoI9qo_7M8YCnvGWVYJXOGCStvckxHu9&sz=w1600', alt: 'Mindcare brand story' },
+        { src: 'https://drive.google.com/thumbnail?id=1dn4jCOGQYJfWqyrkyygaoO3F1SL594Vx&sz=w1600', alt: 'Mindcare introduction slide' },
+        { src: 'https://drive.google.com/thumbnail?id=1d5Cpp2LaH1t5RgIiZ2v8utgV8CoBTXP9&sz=w1600', alt: 'Mindcare mission and values' },
+        { src: 'https://drive.google.com/thumbnail?id=1elHNp8Cbxeag-iqfAeQO8V6NjLFNum6v&sz=w1600', alt: 'Mindcare colour palette' },
+        { src: 'https://drive.google.com/thumbnail?id=1nkfQqwOVHCElr72C4QTFYb4ehZdTORFq&sz=w1600', alt: 'Mindcare logo exploration' },
+        { src: 'https://drive.google.com/thumbnail?id=11HsgrMfJ3nhV2Ng5aqWrF8Ks3HNcWwG3&sz=w1600', alt: 'Mindcare visual elements and icons' },
+        { src: 'https://drive.google.com/thumbnail?id=1KgAhPTQfK8prk1iBVp9cxqI-1nAfNMTl&sz=w1600', alt: 'Mindcare stationery' },
+        { src: 'https://drive.google.com/thumbnail?id=1mNaOL5c4Rfs-t7bqRCnFynVVC-xCdL_L&sz=w1600', alt: 'Mindcare typography' },
+        { src: 'https://drive.google.com/thumbnail?id=1wIGDyI7wsLV6FfkkCNw4aW7W36JRrF_r&sz=w1600', alt: 'Mindcare logo variations' },
+        { src: 'https://drive.google.com/thumbnail?id=1RURRfLIGI2KkQ36ZVMz6yxnhIsuouzLA&sz=w1600', alt: 'Mindcare brand applications' },
+        { src: 'https://drive.google.com/thumbnail?id=10-C9RPYELYIi5YYGSwHSFa6mAQKPi3db&sz=w1600', alt: 'Mindcare website mockup' },
+        { src: 'https://drive.google.com/thumbnail?id=1cS2y6AnuFyarlolEq9il_XZsdnfBslSn&sz=w1600', alt: 'Mindcare social media mockup' },
+        { src: 'https://drive.google.com/thumbnail?id=1-VyS1ejJNjPECbruUnwfzrT4buem9Za_&sz=w1600', alt: 'Mindcare closing brandbook' }
       ],
       facts: [
         { k: 'Strategy chapters', v: '11' },
         { k: 'Audience personas', v: '2' },
         { k: 'Working language', v: 'PT' }
+      ]
+    },
+    bolleno: {
+      client: 'Bolleno',
+      sector: 'Home & Body',
+      location: 'Indonesia',
+      language: 'English',
+      headline: 'Four product worlds. One distinctive brand experience.',
+      summary:
+        'A complete brand identity and digital experience designed to bring body care, bath rituals, home fragrance and herbal teas together under one recognisable brand.',
+      cover: '/images/work/bolleno-cover.svg',
+      scope: [
+        'Brand positioning',
+        'Brand identity',
+        'Visual direction',
+        'Colour and typography system',
+        'Product category architecture',
+        'Brand guidelines',
+        'Website design and experience',
+        'Product storytelling',
+        'Packaging direction',
+        'Digital art direction'
+      ],
+      sections: [
+        {
+          title: 'The challenge',
+          body: 'Bolleno was conceived as more than a collection of scented products. Its ambition was to bring together everyday rituals for the body and home, from natural body oils and bath salts to aromatic candles, ceramic objects and herbal teas. The challenge was creating a brand that could accommodate these different product categories without losing its identity. Each product needed its own purpose, while still feeling unmistakably part of Bolleno.'
+        },
+        {
+          title: 'The diagnosis',
+          body: 'Four different product categories meant four different purchasing motivations. Someone choosing a body oil is looking for a different experience from someone buying a candle or a ceramic object. Yet treating each category as a separate visual identity would make the brand harder to recognise and remember. The opportunity was to establish a common emotional and visual language connecting every product through scent, material, texture and ritual. Bolleno needed to feel like one world, not four separate collections.'
+        },
+        {
+          title: 'The strategy',
+          body: 'We built the brand direction around a simple idea: the relationship between the spaces we inhabit and the way we care for ourselves. Natural stone, Mediterranean influences, organic textures and restrained compositions became the foundation for Bolleno’s visual language. The product portfolio was organised into four distinct worlds: BODY — Natural body oils and scrubs. BATH — Aromatic bath salts, soaps and tea baths. HOME — Scented candles, diffusers and ceramic objects. TEA — Natural herbal infusions. Each category has its own function, but shares the same design principles, brand voice and visual identity. This creates room for the product range to grow without requiring the brand to reinvent itself with every new collection.'
+        },
+        {
+          title: 'Execution',
+          body: 'The brand direction was translated into a cohesive digital shopping experience, connecting product discovery, category navigation, imagery and storytelling. The website was designed to give products space to communicate through photography, texture and carefully considered descriptions, rather than overwhelming visitors with information. Visual guidelines established a consistent approach to colour, typography, imagery and product presentation, providing a foundation for packaging, digital campaigns and future collections. The result is a unified brand direction that makes Bolleno’s diverse product offering easier to navigate, understand and recognise.'
+        },
+        {
+          title: 'Your products deserve a brand people remember.',
+          body: 'Whether you are launching your first collection or bringing several product lines under one identity, the decisions behind your brand affect how people discover, understand and choose what you sell. We help you make those decisions with clarity, from positioning and identity to the digital experience that brings everything together.'
+        }
+      ],
+      images: [
+        { src: '/images/work/bolleno/01.png', alt: 'Bolleno cover' },
+        { src: '/images/work/bolleno/02.png', alt: 'Bolleno product world map' },
+        { src: '/images/work/bolleno/03.png', alt: 'Bolleno brand moodboard' },
+        { src: '/images/work/bolleno/04.png', alt: 'Bolleno product storytelling' },
+        { src: '/images/work/bolleno/05.png', alt: 'Bolleno visual direction' },
+        { src: '/images/work/bolleno/06.png', alt: 'Bolleno palette and typography' },
+        { src: '/images/work/bolleno/07.png', alt: 'Bolleno packaging concept' },
+        { src: '/images/work/bolleno/08.png', alt: 'Bolleno lifestyle photography' },
+        { src: '/images/work/bolleno/09.png', alt: 'Bolleno product detail' },
+        { src: '/images/work/bolleno/10.png', alt: 'Bolleno ecommerce direction' },
+        { src: '/images/work/bolleno/11.png', alt: 'Bolleno digital brand application' },
+        { src: '/images/work/bolleno/12.png', alt: 'Bolleno final showcase' }
+      ],
+      facts: [
+        { k: 'Product categories', v: '04' },
+        { k: 'Creative direction', v: 'Nature-inspired' },
+        { k: 'Brand experience', v: 'Home & Body' }
+      ]
+    },
+    courve: {
+      client: 'Courve',
+      sector: 'Pilates & Yoga Studio',
+      location: 'Indonesia',
+      language: 'English',
+      headline: 'From a business idea to a brand ready to enter the market.',
+      summary:
+        'A brand creation project for a new Pilates and yoga studio, covering positioning, personality, identity and launch communication foundations for a stronger first impression.',
+      cover: '/images/work/courve/slides/01.webp',
+      scope: [
+        'Brand positioning',
+        'Creative direction',
+        'Brand personality',
+        'Logo and visual identity',
+        'Colour and typography system',
+        'Visual communication guidelines',
+        'Brand application direction',
+        'Launch communication foundation'
+      ],
+      sections: [
+        {
+          title: 'The challenge',
+          body: 'Courve was a new Pilates and yoga studio with a vision, but no established brand. We developed its identity from the ground up, creating the foundation for how the business would introduce itself, connect with its audience and build recognition from day one. For a business at this stage, the brand has to do more than look polished. It needs to communicate what the studio stands for, attract the right people and make the offer feel worth choosing before the doors open. The challenge was to turn the founder’s vision into a brand that could carry those expectations consistently.'
+        },
+        {
+          title: 'The diagnosis',
+          body: 'Pilates and yoga operate in a crowded visual category. Similar colours, imagery and language can make different businesses feel difficult to distinguish. For Courve, simply adopting familiar wellness aesthetics would not be enough. The brand needed to communicate a distinct personality while bringing two disciplines together under one cohesive identity. That meant answering the questions that influence how a new business enters the market: who should feel that Courve is for them, what kind of experience should the brand suggest and what should someone remember after discovering it for the first time.'
+        },
+        {
+          title: 'The strategy',
+          body: 'The direction for Courve was to create a brand that felt intentional, contemporary and connected to movement and wellbeing. Rather than treating Pilates and yoga as two separate offerings, the identity needed to give them a shared home. We approached the brand as a complete experience, considering how its personality should come through in visual design, language and the different places people would encounter it. The objective was consistency without repetition: a recognisable identity that could adapt to different classes, communications and future services without losing its character. Every design choice needed to support the same goal: helping people understand what Courve offers and what makes the studio worth exploring.'
+        },
+        {
+          title: 'Execution',
+          body: 'We translated the brand direction into a cohesive visual identity, connecting the logo, typography, colour palette and graphic language. The system was designed for the real situations a new studio faces when entering the market: introducing the business, presenting classes, communicating online and building a recognisable presence across physical and digital touchpoints. Instead of creating individual visuals without a common direction, the identity establishes a consistent foundation for future applications, from studio signage and class schedules to social media and promotional materials. The work was designed to give the founder a brand that could grow alongside the business.'
+        },
+        {
+          title: 'The result',
+          body: 'Courve moved from an initial business concept to a defined brand identity with a consistent visual direction. The founder gained a foundation for presenting the studio, communicating its offering and making future creative decisions without starting from zero every time. A coherent brand removes uncertainty from one important part of the launch process. Courve demonstrates what building a brand from the beginning can look like: not simply designing something attractive, but giving a new business an identity it can confidently take into the market.'
+        },
+        {
+          title: 'Your business doesn’t have to be established to deserve a strong brand.',
+          body: 'You may have the concept, the ambition and a clear idea of what you want to build, but still be figuring out how to bring it all together. That is where we come in. We help founders turn early-stage business ideas into brands with clear positioning, distinctive identities and the foundations needed to enter the market with confidence.'
+        }
+      ],
+      images: [
+        { src: '/images/work/courve/slides/01.webp', alt: 'Courve brand guidelines cover' },
+        { src: '/images/work/courve/slides/02.webp', alt: 'Courve brand introduction' },
+        { src: '/images/work/courve/slides/03.webp', alt: 'Courve brand concept' },
+        { src: '/images/work/courve/slides/04.webp', alt: 'Courve original logo system' },
+        { src: '/images/work/courve/slides/05.webp', alt: 'Courve colour palette' },
+        { src: '/images/work/courve/slides/06.webp', alt: 'Courve typography' },
+        { src: '/images/work/courve/slides/07.webp', alt: 'Courve visual language' },
+        { src: '/images/work/courve/slides/08.webp', alt: 'Courve stationery and merchandise' },
+        { src: '/images/work/courve/slides/09.webp', alt: 'Courve website and social concept' },
+        { src: '/images/work/courve/slides/10.webp', alt: 'Courve studio signage and closing' }
+      ],
+      facts: [
+        { k: 'Business stage', v: 'Pre-launch' },
+        { k: 'Project scope', v: 'Brand creation' },
+        { k: 'Disciplines', v: 'Pilates & Yoga' }
+      ]
+    },
+    yarnbe: {
+      client: 'YARNBE',
+      sector: 'Crochet Studio',
+      location: 'Indonesia',
+      language: 'English',
+      headline: 'Handmade with intention. Branded to be remembered.',
+      summary:
+        'A distinctive visual identity for a crochet studio, bringing together craftsmanship, creativity and a recognisable brand experience through thoughtful design.',
+      cover: '/images/work/yarnbe-cover.svg',
+      scope: [
+        'Brand moodboard and visual research',
+        'Creative direction',
+        'Logo identity',
+        'Colour palette',
+        'Visual identity system',
+        'Brand applications',
+        'Packaging concepts and mockups'
+      ],
+      sections: [
+        {
+          title: 'The challenge',
+          body: 'When everything is handmade, how do you make the brand unmistakably yours? Crochet is personal. Every piece represents time, attention and craftsmanship. But creating beautiful products and building a recognisable business are two different challenges. A handmade business needs to communicate more than what it sells. It needs to help customers understand what makes its products special and why they are worth choosing. For YARNBE, the design challenge was to give a creative studio an identity that could carry the personality of its work beyond the individual pieces. The brand needed to be recognisable whether someone encountered it on packaging, in a photograph or through a digital presentation.'
+        },
+        {
+          title: 'The diagnosis',
+          body: 'The product shows the skill. The brand helps people recognise the value. Handmade businesses often depend heavily on the visual appeal of individual products. But beautiful photographs alone do not establish a distinctive brand. Customers may admire a piece without remembering who made it, or understand the craftsmanship without recognising what makes the studio different. For YARNBE, the opportunity was to connect the identity of the maker with the presentation of the work. That required a visual language with enough personality to be memorable, but enough consistency to work across different products and brand applications.'
+        },
+        {
+          title: 'The strategy',
+          body: 'Give the creativity a recognisable identity. The direction centred on creating a cohesive visual identity that could support the studio’s handmade character without depending on any single product to communicate it. We developed the design foundation through visual research, moodboarding, logo development and colour exploration. The intention was to create consistency across the elements customers associate with the business, so the brand could become familiar through repeated encounters. Rather than making every application look identical, the identity provides a shared language that allows different products and presentations to feel connected. This gives the studio a clearer foundation for communicating its work as a brand, not simply a collection of handmade objects.'
+        },
+        {
+          title: 'Execution',
+          body: 'From visual concept to a brand that can travel with every product. The creative direction was translated into logo assets, a defined colour palette and visual applications. Packaging concepts and mockups explored how the identity could appear beyond the screen, connecting the physical product with the brand behind it. This is particularly important for a crochet studio. Packaging, labels and presentation are moments when customers encounter the business as a whole, not just an individual item. By developing these elements together, the identity establishes a more consistent way for YARNBE to present itself across customer touchpoints.'
+        },
+        {
+          title: 'The outcome',
+          body: 'An individual craft, with an identity people can recognise. The project gave YARNBE a defined visual foundation, connecting its logo, colours and creative direction into a cohesive brand presentation. Instead of making design decisions independently for every new application, the studio has a clearer reference for how its identity should appear. The work demonstrates the value of investing in brand creation: helping the business establish recognition while giving the founder a consistent starting point for future communication and product presentation. For a handmade studio, the goal is not to make the work feel mass-produced. It is to make the business behind that work unmistakable.'
+        },
+        {
+          title: 'You’ve put care into what you create. Your brand should reflect it.',
+          body: 'You have the product, the skills and the ambition to build something of your own. But turning what you make into a recognisable business takes decisions about how you present it, communicate its value and earn the confidence of the people you want to reach. We help founders create brands that make their work easier to understand, easier to recognise and easier to choose. From the first idea to a cohesive identity, we help you build the foundation for what comes next.'
+        }
+      ],
+      images: [
+        { src: '/images/work/yarnbe-brand.svg', alt: 'YARNBE moodboard, logo exploration and colour research' },
+        { src: '/images/work/yarnbe-showcase.svg', alt: 'YARNBE packaging mockups and identity applications' }
+      ],
+      facts: [
+        { k: 'Industry', v: 'Handmade & Lifestyle' },
+        { k: 'Project focus', v: 'Brand Identity' },
+        { k: 'Creative scope', v: 'Identity & Packaging' }
       ]
     }
   },
@@ -439,15 +646,14 @@ const en = {
   },
 
   contactPage: {
-    eyebrow: 'Contact',
-    title: 'Tell us where the gap is.',
-    lede: 'Share a few details about your business. We reply personally within two working days to schedule a 45-minute diagnostic call.',
-    stepsTitle: 'What happens next',
+    eyebrow: 'LET’S TALK BUSINESS',
+    title: 'Tell us what you’re building.',
+    lede: 'You can come with a defined brief or a problem you are still trying to understand. Maybe you are preparing to launch. Maybe your business has outgrown its brand. Or maybe something in the way it operates needs to change. Tell us a little about your business, what you are working towards and where you need support. We will review your enquiry and discuss the most useful next step.',
+    stepsTitle: 'What happens after you reach out?',
     steps: [
-      { t: 'You send the brief', d: 'Two minutes. Only what we need to prepare.' },
-      { t: 'We reply within two working days', d: 'From a person, never an automated sequence.' },
-      { t: '45-minute diagnostic call', d: 'Free, and useful whether or not we work together.' },
-      { t: 'Written proposal', d: 'Fixed scope, timeline and price for you to review.' }
+      { t: 'Tell us about your business', d: 'Share what you are building, what you are trying to improve or the challenge you are facing.' },
+      { t: 'We review your enquiry', d: 'We look at your situation and consider where DGAP may be able to help.' },
+      { t: 'We discuss the next step', d: 'If there is a potential fit, we will arrange an introductory conversation to explore the project.' }
     ],
     directTitle: 'Prefer to write directly?',
     emailLabel: 'Email',
@@ -474,14 +680,14 @@ const en = {
     },
     message: 'Anything we should know?',
     messagePlaceholder: 'Your market, your goals, what you have tried so far.',
-    submit: 'Send brief',
+    submit: 'Request a Consultation',
     sending: 'Sending…',
-    success: 'Brief received. We will reply within two working days.',
+    success: 'Brief received. We will review your enquiry and discuss the most useful next step.',
     errorRequired: 'Please fill in this field.',
     errorEmail: 'Please enter a valid email address.',
     errorServer: 'We couldn’t send the form just now. Please email us directly at',
     errorRate: 'Too many attempts. Please wait a few minutes or email us at',
-    privacy: 'We use these details only to reply to you. No newsletters, no sharing.'
+    privacy: 'Your first conversation is free. No obligation to begin a project. We use these details only to reply to you. No newsletters, no sharing.'
   },
 
   footer: {

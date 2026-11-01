@@ -39,7 +39,7 @@ function organization(locale) {
   };
   if (site.email) org.email = site.email;
   if (site.whatsapp) org.telephone = '+' + site.whatsapp;
-  const sameAs = [site.instagram, site.linkedin].filter(Boolean);
+  const sameAs = [site.instagram, site.facebook, site.linkedin].filter(Boolean);
   if (sameAs.length) org.sameAs = sameAs;
   if (site.founder.name) {
     org.founder = {
@@ -55,9 +55,10 @@ function organization(locale) {
 function breadcrumb(route, locale) {
   const t = DICTS[locale];
   const items = [{ name: 'DGAP', url: abs(pathFor('home', locale)) }];
-  if (route.key === 'case-mindcare') {
+  if (route.key.startsWith('case-')) {
+    const slug = route.key.replace('case-', '');
     items.push({ name: t.nav.work, url: abs(pathFor('work', locale)) });
-    items.push({ name: t.cases.mindcare.client, url: abs(route[locale]) });
+    items.push({ name: t.cases[slug].client, url: abs(route[locale]) });
   } else if (route.key !== 'home') {
     items.push({ name: t.nav[route.key] || route.key, url: abs(route[locale]) });
   }
@@ -111,7 +112,7 @@ export function headFor(pathname) {
     { tag: 'title', text: meta.title },
     { tag: 'meta', attrs: { name: 'description', content: meta.description } },
     { tag: 'meta', attrs: { name: 'robots', content: route ? 'index, follow, max-image-preview:large' : 'noindex' } },
-    { tag: 'meta', attrs: { property: 'og:type', content: route?.key === 'case-mindcare' ? 'article' : 'website' } },
+    { tag: 'meta', attrs: { property: 'og:type', content: route?.key?.startsWith('case-') ? 'article' : 'website' } },
     { tag: 'meta', attrs: { property: 'og:site_name', content: site.name } },
     { tag: 'meta', attrs: { property: 'og:title', content: meta.title } },
     { tag: 'meta', attrs: { property: 'og:description', content: meta.description } },
@@ -143,15 +144,15 @@ export function headFor(pathname) {
         inLanguage: ['en', 'id']
       },
       {
-        '@type': route.key === 'case-mindcare' ? 'Article' : route.key === 'contact' ? 'ContactPage' : route.key === 'about' ? 'AboutPage' : 'WebPage',
+        '@type': route.key.startsWith('case-') ? 'Article' : route.key === 'contact' ? 'ContactPage' : route.key === 'about' ? 'AboutPage' : 'WebPage',
         '@id': `${url}#webpage`,
         url,
         name: meta.title,
         description: meta.description,
         inLanguage: locale,
         isPartOf: { '@id': `${site.url}/#website` },
-        ...(route.key === 'case-mindcare'
-          ? { headline: t.cases.mindcare.headline, image: site.url + t.cases.mindcare.cover, author: { '@id': `${site.url}/#organization` } }
+        ...(route.key.startsWith('case-')
+          ? { headline: t.cases[route.key.replace('case-', '')].headline, image: site.url + t.cases[route.key.replace('case-', '')].cover, author: { '@id': `${site.url}/#organization` } }
           : { about: { '@id': `${site.url}/#organization` } })
       },
       breadcrumb(route, locale)

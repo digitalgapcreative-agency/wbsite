@@ -20,6 +20,9 @@ const PAGES = {
   consultancy: () => <Consultancy />,
   work: () => <Work />,
   'case-mindcare': () => <CaseStudy slug="mindcare" />,
+  'case-bolleno': () => <CaseStudy slug="bolleno" />,
+  'case-courve': () => <CaseStudy slug="courve" />,
+  'case-yarnbe': () => <CaseStudy slug="yarnbe" />,
   about: () => <About />,
   contact: () => <Contact />
 };

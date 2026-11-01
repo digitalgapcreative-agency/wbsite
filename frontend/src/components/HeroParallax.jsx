@@ -76,7 +76,7 @@ export default function HeroParallax({ header, cards, locale, to, viewLabel }) {
                 tabIndex={-1}
                 data-cursor={viewLabel}
               >
-                <img src={card.img} alt="" width="600" height="480" loading={r === 0 ? 'eager' : 'lazy'} decoding="async" />
+                <img src={card.img} alt="" width="600" height="480" loading="eager" decoding="async" />
                 <span className="hpx__shade" />
                 {card.title?.[locale] ? <span className="hpx__title">{card.title[locale]}</span> : null}
               </TLink>

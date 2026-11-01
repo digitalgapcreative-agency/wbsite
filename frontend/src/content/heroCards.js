@@ -135,5 +135,29 @@ export const heroCards = [
       "en": "",
       "id": ""
     }
+  },
+  {
+    "img": "/images/work/bolleno/01.png",
+    "route": "case-bolleno",
+    "title": {
+      "en": "Bolleno · Brand world",
+      "id": "Bolleno · Dunia brand"
+    }
+  },
+  {
+    "img": "/images/work/courve/slides/01.webp",
+    "route": "case-courve",
+    "title": {
+      "en": "Courve · Studio identity",
+      "id": "Courve · Identitas studio"
+    }
+  },
+  {
+    "img": "/images/work/mindcare/01.webp",
+    "route": "case-mindcare",
+    "title": {
+      "en": "Mindcare · Brand system",
+      "id": "Mindcare · Sistem brand"
+    }
   }
 ];

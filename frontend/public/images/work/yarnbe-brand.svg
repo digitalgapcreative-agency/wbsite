@@ -1,0 +1,20 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#F2EFEA"/>
+  <rect x="85" y="95" width="1030" height="710" rx="28" fill="#FAF8F4" stroke="#DCCBB8" stroke-width="2"/>
+  <rect x="160" y="166" width="305" height="280" rx="20" fill="#E7E3DB"/>
+  <rect x="520" y="166" width="510" height="280" rx="20" fill="#EAD9C8"/>
+  <rect x="160" y="488" width="870" height="240" rx="18" fill="#EEF0E9"/>
+  <path d="M238 210C271 180 301 170 338 170C384 170 424 188 451 225C474 255 487 294 480 332C474 369 455 401 424 426C393 451 356 464 319 464C283 464 252 451 224 423C196 395 181 359 184 320C186 277 202 239 238 210Z" fill="#F7F4F0"/>
+  <path d="M257 288C278 265 306 253 338 253C370 253 394 267 409 288C420 303 426 319 426 338C426 367 405 397 371 415C337 433 303 434 271 419C243 406 223 381 218 349C214 325 225 303 257 288Z" fill="#D3BCA0"/>
+  <path d="M310 308L352 328L393 378L340 420L280 363L310 308Z" fill="#FAF6F1"/>
+  <text x="186" y="216" fill="#3D352F" font-family="Arial, sans-serif" font-size="18" letter-spacing="5">MOODBOARD</text>
+  <text x="188" y="658" fill="#2E2A27" font-family="Georgia, serif" font-size="52" font-weight="700">Naturally tactile</text>
+  <text x="548" y="222" fill="#473D38" font-family="Arial, sans-serif" font-size="18" letter-spacing="5">COLOUR</text>
+  <rect x="548" y="250" width="132" height="132" rx="18" fill="#E5D6C7"/>
+  <rect x="690" y="250" width="132" height="132" rx="18" fill="#B9B29D"/>
+  <rect x="832" y="250" width="132" height="132" rx="18" fill="#DAC8A6"/>
+  <rect x="974" y="250" width="32" height="132" rx="16" fill="#F9F6F1"/>
+  <text x="552" y="408" fill="#433B35" font-family="Arial, sans-serif" font-size="24" letter-spacing="4">YARNBE</text>
+  <text x="552" y="438" fill="#6F5E50" font-family="Arial, sans-serif" font-size="18">Handmade, warm, tactile</text>
+  <text x="192" y="592" fill="#4E433C" font-family="Arial, sans-serif" font-size="22" letter-spacing="4">TEXTURE • STORY • CARE</text>
+</svg>

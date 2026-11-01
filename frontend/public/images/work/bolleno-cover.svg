@@ -1,0 +1,33 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#F4EFE8"/>
+  <rect y="630" width="1200" height="270" fill="#D6C5AF"/>
+  <circle cx="930" cy="190" r="170" fill="#C98D68" fill-opacity="0.22"/>
+  <circle cx="220" cy="200" r="180" fill="#B6C1A5" fill-opacity="0.28"/>
+  <path d="M210 590C287 520 344 490 423 490C499 490 558 525 615 582C676 641 721 668 798 668C887 668 969 620 1039 561V900H210V590Z" fill="#ECE0D0"/>
+  <path d="M720 150L878 274L720 392L560 274L720 150Z" fill="#B9B4A0"/>
+  <path d="M720 212L802 274L720 336L638 274L720 212Z" fill="#F4EFE8" fill-opacity="0.7"/>
+  <g opacity="0.96">
+    <rect x="490" y="355" width="214" height="316" rx="22" fill="#F6F2EC"/>
+    <rect x="517" y="399" width="160" height="114" rx="16" fill="#D3C7B4"/>
+    <rect x="517" y="533" width="160" height="18" rx="9" fill="#C9AF8B"/>
+    <rect x="517" y="565" width="160" height="18" rx="9" fill="#C9AF8B" fill-opacity="0.8"/>
+    <rect x="517" y="597" width="116" height="18" rx="9" fill="#C9AF8B" fill-opacity="0.6"/>
+    <text x="570" y="454" text-anchor="middle" fill="#5D4A39" font-family="Georgia, serif" font-size="28" font-weight="700">Bolleno</text>
+    <text x="570" y="620" text-anchor="middle" fill="#7D6858" font-family="Arial, sans-serif" font-size="18" letter-spacing="4">HOME &amp; BODY</text>
+  </g>
+  <g opacity="0.9">
+    <rect x="143" y="303" width="228" height="180" rx="24" fill="#EFE3D3"/>
+    <rect x="171" y="332" width="172" height="122" rx="18" fill="#D8C4AB"/>
+    <path d="M200 386C222 349 238 332 263 332C287 332 319 350 338 386L322 450H216L200 386Z" fill="#F7F1E8" fill-opacity="0.75"/>
+    <path d="M192 207C192 189 206 175 224 175H315C333 175 347 189 347 207V240H192V207Z" fill="#CAD0B7"/>
+    <rect x="177" y="240" width="169" height="40" rx="18" fill="#B7BA9F"/>
+  </g>
+  <g opacity="0.88">
+    <circle cx="945" cy="500" r="120" fill="#F1E6D6"/>
+    <circle cx="945" cy="500" r="68" fill="#D7C2A2"/>
+    <path d="M945 438L968 486L945 534L922 486L945 438Z" fill="#F7F2EA"/>
+    <text x="945" y="613" text-anchor="middle" fill="#4B3B30" font-family="Arial, sans-serif" font-size="22" font-weight="700">BODY</text>
+  </g>
+  <text x="95" y="170" fill="#3C312D" font-family="Arial, sans-serif" font-size="18" letter-spacing="5">NATURE · RITUAL · HOME</text>
+  <text x="96" y="785" fill="#3C312D" font-family="Georgia, serif" font-size="74" font-weight="700">Bolleno</text>
+</svg>

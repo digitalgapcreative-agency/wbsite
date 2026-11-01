@@ -20,7 +20,8 @@
     "admin:hash": "node backend/scripts/hash-password.mjs",
     "verify": "node scripts/verify-deploy.mjs",
     "check:secrets": "node scripts/check-secrets.mjs",
-    "test:local": "node scripts/test-local.mjs"
+    "test:local": "node scripts/test-local.mjs",
+    "admin:check": "node backend/scripts/check-admin.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "4.3.4",

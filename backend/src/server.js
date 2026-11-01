@@ -44,7 +44,7 @@ app.use(
         'script-src': ["'self'", "'unsafe-inline'"],
         'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
         'font-src': ["'self'", 'https://fonts.gstatic.com', 'data:'],
-        'img-src': ["'self'", 'data:', 'blob:'],
+        'img-src': ["'self'", 'data:', 'blob:', 'https://drive.google.com', 'https://*.googleusercontent.com'],
         'connect-src': ["'self'", ...config.corsOrigins],
         'frame-ancestors': ["'self'"],
         'form-action': ["'self'"]

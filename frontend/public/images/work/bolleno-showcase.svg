@@ -1,0 +1,25 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#F3EFE8"/>
+  <rect x="80" y="140" width="1040" height="640" rx="30" fill="#F8F6F2" stroke="#D9C6AA" stroke-width="2"/>
+  <rect x="148" y="210" width="392" height="420" rx="18" fill="#E7DCCB"/>
+  <rect x="570" y="210" width="404" height="166" rx="18" fill="#EFE2D1"/>
+  <rect x="570" y="396" width="404" height="234" rx="18" fill="#E4E4D6"/>
+  <rect x="184" y="250" width="320" height="240" rx="14" fill="#F6F1EA"/>
+  <rect x="214" y="284" width="260" height="140" rx="20" fill="#D1C1A2"/>
+  <text x="244" y="383" fill="#543F35" font-family="Georgia, serif" font-size="34" font-weight="700">Bolleno</text>
+  <text x="245" y="420" fill="#78685A" font-family="Arial, sans-serif" font-size="18" letter-spacing="4">HOME &amp; BODY</text>
+  <text x="610" y="268" fill="#4D3D32" font-family="Arial, sans-serif" font-size="18" letter-spacing="5">BODY</text>
+  <text x="610" y="318" fill="#4D3D32" font-family="Georgia, serif" font-size="48" font-weight="700">Bath ritual</text>
+  <text x="612" y="444" fill="#4D3D32" font-family="Arial, sans-serif" font-size="18" letter-spacing="5">TEA</text>
+  <text x="612" y="494" fill="#4D3D32" font-family="Georgia, serif" font-size="46" font-weight="700">Slow care</text>
+  <text x="610" y="548" fill="#765F52" font-family="Arial, sans-serif" font-size="20">Natural ingredients. Thoughtful routines.</text>
+  <g>
+    <rect x="180" y="700" width="840" height="42" rx="21" fill="#E2D6BF"/>
+    <text x="210" y="728" fill="#4E413A" font-family="Arial, sans-serif" font-size="16" letter-spacing="4">PACKAGING • WEB EXPERIENCE • GUIDELINES</text>
+  </g>
+  <g>
+    <circle cx="960" cy="316" r="78" fill="#D5BA93"/>
+    <circle cx="960" cy="316" r="40" fill="#F8F4EF"/>
+    <path d="M960 270L978 316L960 362L942 316L960 270Z" fill="#E9D9C5"/>
+  </g>
+</svg>

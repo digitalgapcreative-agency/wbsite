@@ -1,0 +1,16 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#F4EFEA"/>
+  <rect x="80" y="100" width="1040" height="700" rx="30" fill="#F8F6F2"/>
+  <circle cx="281" cy="276" r="185" fill="#D8E2D0"/>
+  <circle cx="908" cy="730" r="220" fill="#E7D7C8"/>
+  <path d="M517 198C558 198 596 215 621 246C646 278 663 320 663 366C663 437 621 486 554 496V580H481V496C412 485 370 436 370 365C370 319 388 277 416 246C442 217 477 198 517 198Z" fill="#F7F4F0"/>
+  <path d="M550 240H597C634 240 664 267 664 302V324C664 359 634 386 597 386H550V240ZM550 362H597C613 362 626 374 626 390V396C626 411 613 423 597 423H550V362Z" fill="#B6BCA5"/>
+  <path d="M453 240H420C383 240 353 270 353 307V324C353 360 383 390 420 390H453V240Z" fill="#D4C4AD"/>
+  <path d="M452 238L370 504H306L385 238H452Z" fill="#EDF1EA"/>
+  <path d="M621 238L706 504H638L557 238H621Z" fill="#E5D7C8"/>
+  <path d="M453 560H721V598H453V560Z" fill="#D7D9CF"/>
+  <rect x="179" y="669" width="842" height="53" rx="26.5" fill="#E7D9C9"/>
+  <text x="214" y="210" fill="#3B372F" font-family="Arial, sans-serif" font-size="18" letter-spacing="6">PILATES · YOGA</text>
+  <text x="214" y="764" fill="#362F2B" font-family="Georgia, serif" font-size="72" font-weight="700">Courve</text>
+  <text x="215" y="714" fill="#695D53" font-family="Arial, sans-serif" font-size="24" letter-spacing="5">MOVEMENT FOR EVERYDAY WELLBEING</text>
+</svg>

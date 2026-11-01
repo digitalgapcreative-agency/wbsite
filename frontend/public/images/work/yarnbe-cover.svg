@@ -1,0 +1,19 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#F5F1EC"/>
+  <rect x="92" y="85" width="1016" height="730" rx="28" fill="#FBF8F3"/>
+  <circle cx="310" cy="260" r="180" fill="#E3D8C3"/>
+  <circle cx="904" cy="660" r="200" fill="#E1C6B0"/>
+  <rect x="172" y="176" width="356" height="370" rx="18" fill="#EEE6DD"/>
+  <path d="M208 258C208 228 233 204 263 204H470C500 204 525 228 525 258V518H208V258Z" fill="#F5F1ED"/>
+  <path d="M255 194C290 158 324 152 362 153C401 153 435 170 462 198C492 228 505 270 497 305C490 341 472 369 439 389C409 408 373 418 330 417C297 416 266 405 242 381C210 350 197 311 199 274C200 246 217 213 255 194Z" fill="#B7B19B"/>
+  <path d="M276 302C302 276 332 263 360 263C390 263 412 278 428 303C445 330 450 362 440 392C429 425 402 456 361 471C321 485 293 479 267 456C241 432 226 399 229 364C232 337 249 320 276 302Z" fill="#E9D3B9"/>
+  <path d="M332 242L365 320L420 376L372 430L287 338L332 242Z" fill="#F6F1EC"/>
+  <rect x="630" y="202" width="346" height="170" rx="18" fill="#E7D5C4"/>
+  <rect x="630" y="404" width="346" height="170" rx="18" fill="#E4E0D3"/>
+  <text x="648" y="280" fill="#3F352F" font-family="Arial, sans-serif" font-size="20" letter-spacing="5">YARNBE</text>
+  <text x="648" y="324" fill="#4D413A" font-family="Georgia, serif" font-size="52" font-weight="700">Handmade</text>
+  <text x="648" y="476" fill="#3F352F" font-family="Arial, sans-serif" font-size="20" letter-spacing="5">CRAFT • TEXTURE • STORY</text>
+  <text x="648" y="518" fill="#4D413A" font-family="Georgia, serif" font-size="46" font-weight="700">Thoughtful design</text>
+  <text x="188" y="740" fill="#2F2A27" font-family="Arial, sans-serif" font-size="20" letter-spacing="5">CROCHET STUDIO</text>
+  <text x="188" y="780" fill="#3F352F" font-family="Georgia, serif" font-size="68" font-weight="700">YARNBE</text>
+</svg>

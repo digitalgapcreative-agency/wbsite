@@ -11,10 +11,11 @@ export const site = {
   tagline: 'Building brands with structure',
 
   // Contact — verify before launch
-  email: 'hello@digitalgapco.com',
-  whatsapp: '', // digits only, with country code, e.g. '6281234567890'
-  instagram: '', // full URL, e.g. 'https://www.instagram.com/digitalgapco'
-  linkedin: '', // full URL
+  email: 'agency@digitalgapco.com',
+  whatsapp: '6282311844027', // digits only, with country code, e.g. '6281234567890'
+  instagram: 'https://www.instagram.com/digitalgapstrategic?srtk=MXRkcG5tZnFiOGhzNw==',
+  facebook: 'https://www.facebook.com/profile.php?id=61588452839545',
+  linkedin: 'https://www.linkedin.com/company/digitalgap-mz/', // full URL
 
   founder: {
     name: '', // shown on About + used in schema.org (strong E-E-A-T signal)
@@ -37,9 +38,9 @@ export const site = {
    */
   clients: [
     { name: 'Mindcare', logo: null, services: ['diagnosis', 'strategy', 'identity', 'marketing', 'website'], caseKey: 'case-mindcare' },
-    { name: 'Bolleno', logo: null, services: ['strategy', 'identity'] },
-    { name: 'Yarnbe', logo: null, services: [] },
-    { name: 'Courve', logo: null, services: [] }
+    { name: 'Bolleno', logo: null, services: ['strategy', 'identity'], caseKey: 'case-bolleno' },
+    { name: 'Courve', logo: null, services: ['strategy', 'identity'], caseKey: 'case-courve' },
+    { name: 'Yarnbe', logo: null, services: ['identity'], caseKey: 'case-yarnbe' }
   ],
 
   /**

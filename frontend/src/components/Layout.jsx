@@ -247,6 +247,7 @@ export default function Layout() {
                 {site.email && <li><a href={`mailto:${site.email}`}>{site.email}</a></li>}
                 {site.whatsapp && <li><a href={`https://wa.me/${site.whatsapp}`} rel="noopener" target="_blank">WhatsApp</a></li>}
                 {site.instagram && <li><a href={site.instagram} rel="noopener" target="_blank">Instagram</a></li>}
+                {site.facebook && <li><a href={site.facebook} rel="noopener" target="_blank">Facebook</a></li>}
                 {site.linkedin && <li><a href={site.linkedin} rel="noopener" target="_blank">LinkedIn</a></li>}
               </ul>
             </div>

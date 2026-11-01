@@ -61,14 +61,14 @@ export default function CaseStudy({ slug }) {
                     {s.title}
                   </h2>
                   <p data-reveal="1">{s.body}</p>
-                  {i === 1 && c.images[0] && (
+                  {slug !== 'mindcare' && i === 1 && c.images[0] && (
                     <figure className="case__fig">
                       <div className="case__clip" data-unveil>
                         <img src={c.images[0].src} alt={c.images[0].alt} loading="lazy" decoding="async" />
                       </div>
                     </figure>
                   )}
-                  {i === 3 && c.images[1] && (
+                  {slug !== 'mindcare' && i === 3 && c.images[1] && (
                     <figure className="case__fig">
                       <div className="case__clip" data-unveil>
                         <img src={c.images[1].src} alt={c.images[1].alt} loading="lazy" decoding="async" />

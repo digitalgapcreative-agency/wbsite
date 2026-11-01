@@ -1,0 +1,29 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#F5F1EA"/>
+  <rect x="94" y="90" width="1012" height="720" rx="28" fill="#FDFBF9" stroke="#DCCCB1" stroke-width="2"/>
+  <rect x="160" y="160" width="345" height="244" rx="18" fill="#EEE0CD"/>
+  <rect x="160" y="442" width="345" height="252" rx="18" fill="#E7E2D8"/>
+  <rect x="545" y="160" width="495" height="534" rx="18" fill="#F3E9DD"/>
+  <rect x="580" y="206" width="193" height="193" rx="18" fill="#D6C1A4"/>
+  <rect x="802" y="206" width="204" height="120" rx="18" fill="#B8C0A4"/>
+  <rect x="802" y="346" width="204" height="120" rx="18" fill="#D7C5AA"/>
+  <rect x="802" y="486" width="204" height="120" rx="18" fill="#F4EFEA"/>
+  <text x="178" y="212" fill="#3C312D" font-family="Arial, sans-serif" font-size="20" letter-spacing="3">BODY</text>
+  <text x="178" y="290" fill="#3C312D" font-family="Georgia, serif" font-size="52" font-weight="700">Stone</text>
+  <text x="178" y="520" fill="#3C312D" font-family="Arial, sans-serif" font-size="20" letter-spacing="3">HOME</text>
+  <text x="178" y="607" fill="#3C312D" font-family="Georgia, serif" font-size="52" font-weight="700">Ritual</text>
+  <text x="624" y="265" fill="#51443A" font-family="Arial, sans-serif" font-size="28" font-weight="700">Bolleno</text>
+  <text x="630" y="313" fill="#6B5B4D" font-family="Arial, sans-serif" font-size="16" letter-spacing="4">HOME &amp; BODY</text>
+  <text x="620" y="570" fill="#4A3C34" font-family="Georgia, serif" font-size="46" font-weight="700">Natural textures</text>
+  <text x="620" y="620" fill="#6E5B4E" font-family="Arial, sans-serif" font-size="24">Mediterranean calm</text>
+  <rect x="140" y="724" width="920" height="46" rx="23" fill="#E3D8C5"/>
+  <text x="176" y="754" fill="#463B35" font-family="Arial, sans-serif" font-size="18" letter-spacing="5">FORM • MATERIAL • SCENT • ROUTINE</text>
+  <g>
+    <circle cx="352" cy="306" r="54" fill="#CBA886"/>
+    <circle cx="352" cy="306" r="28" fill="#F5F0E8"/>
+  </g>
+  <g>
+    <circle cx="352" cy="614" r="54" fill="#C8B198"/>
+    <circle cx="352" cy="614" r="28" fill="#F3EFE9"/>
+  </g>
+</svg>

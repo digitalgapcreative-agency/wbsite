@@ -5,6 +5,9 @@ export const ROUTES = [
   { key: 'consultancy', en: '/consultancy', id: '/id/konsultasi', priority: 0.7 },
   { key: 'work', en: '/work', id: '/id/karya', priority: 0.8 },
   { key: 'case-mindcare', en: '/work/mindcare', id: '/id/karya/mindcare', priority: 0.7, caseSlug: 'mindcare' },
+  { key: 'case-bolleno', en: '/work/bolleno', id: '/id/karya/bolleno', priority: 0.7, caseSlug: 'bolleno' },
+  { key: 'case-courve', en: '/work/courve', id: '/id/karya/courve', priority: 0.7, caseSlug: 'courve' },
+  { key: 'case-yarnbe', en: '/work/yarnbe', id: '/id/karya/yarnbe', priority: 0.7, caseSlug: 'yarnbe' },
   { key: 'about', en: '/about', id: '/id/tentang', priority: 0.7 },
   { key: 'contact', en: '/contact', id: '/id/kontak', priority: 0.8 }
 ];

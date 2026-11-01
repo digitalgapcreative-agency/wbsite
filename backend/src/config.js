@@ -2,6 +2,15 @@ const list = (v, fallback = []) =>
   v ? v.split(',').map((s) => s.trim()).filter(Boolean) : fallback;
 const bool = (v, fallback) => (v === undefined || v === '' ? fallback : v === 'true' || v === '1');
 
+/** Tolerates values pasted as NAME=value, with quotes or surrounding spaces/line breaks. */
+export function cleanEnvValue(value, name) {
+  let v = String(value ?? '').trim();
+  if (name && v.startsWith(`${name}=`)) v = v.slice(name.length + 1).trim();
+  if (v.length > 1 && (v[0] === '"' || v[0] === "'") && v.endsWith(v[0])) v = v.slice(1, -1).trim();
+  return v;
+}
+const secret = (name) => cleanEnvValue(process.env[name], name);
+
 const env = process.env.NODE_ENV || 'production';
 const isProd = env === 'production';
 
@@ -33,7 +42,7 @@ export const config = {
   },
 
   session: {
-    secret: process.env.SESSION_SECRET || '',
+    secret: secret('SESSION_SECRET'),
     name: process.env.SESSION_NAME || 'dgap.sid',
     // ".digitalgapco.com" shares the cookie between the main domain and api.digitalgapco.com
     cookieDomain: process.env.COOKIE_DOMAIN || undefined,
@@ -41,8 +50,8 @@ export const config = {
   },
 
   admin: {
-    email: (process.env.ADMIN_EMAIL || '').trim().toLowerCase(),
-    passwordHash: process.env.ADMIN_PASSWORD_HASH || '',
+    email: secret('ADMIN_EMAIL').toLowerCase(),
+    passwordHash: secret('ADMIN_PASSWORD_HASH'),
     get configured() {
       return Boolean(this.email && this.passwordHash);
     }
